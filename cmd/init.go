@@ -66,6 +66,17 @@ Argument:
 		if err != nil {
 			panic(err)
 		}
+
+		// create readme
+		readmeFile, err := os.Create(args[0] + "/README.md")
+		if err != nil {
+			panic(err)
+		}
+
+		_, err = readmeFile.WriteString("# " + args[0] + "\n")
+		if err != nil {
+			panic(err)
+		}
 	},
 }
 
