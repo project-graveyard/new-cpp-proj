@@ -76,7 +76,7 @@ Argument:
 			panic(err)
 		}
 
-		_, err = readmeFile.WriteString("# " + args[0] + "\n")
+		_, err = readmeFile.WriteString("# " + args[0] + "\n\n" + desc + "\n")
 		if err != nil {
 			panic(err)
 		}
