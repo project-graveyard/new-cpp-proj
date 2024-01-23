@@ -30,8 +30,9 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "new-cpp-proj",
-	Short: "Generate a C++ project with Makefile",
+	Use:     "new-cpp-proj",
+	Short:   "Generate a C++ project with Makefile",
+	Version: "0.1.1",
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
