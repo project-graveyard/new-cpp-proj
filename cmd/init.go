@@ -16,14 +16,17 @@ var initCmd = &cobra.Command{
 	Short:        "Initialise a new c++ project",
 	Example:      "new-cpp-proj init directory_name",
 	SilenceUsage: true,
-	Version:      "0.1.0",
 	Long: `
 Initialise a new c++ project
 
 Argument:
   directory    the name of your project directory
 `,
-	Run: func(_ *cobra.Command, args []string) {
+	Run: func(cmd *cobra.Command, args []string) {
+		desc, err := cmd.Flags().GetString("description")
+		if err != nil {
+			panic(err)
+		}
 		// create a new directory
 		os.Mkdir(args[0], 0755)
 
@@ -82,4 +85,5 @@ Argument:
 
 func init() {
 	rootCmd.AddCommand(initCmd)
+	initCmd.Flags().StringP("description", "d", "", "Add a project description")
 }
