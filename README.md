@@ -1,11 +1,18 @@
-# new-cpp-proj
+# new-cpp-proj: Simplify Your C++ Project Creation
 
 Generate a C++ project with Makefile
 
-### main.cpp template
+## Usage
+
+- [new-cpp-proj](/docs/new-cpp-proj.md)
+- [new-cpp-proj init](/docs/new-cpp-proj.md)
+
+## Template Information
+
+### C++ Template
 
 ```cpp
-inclide <iostream>
+include <iostream>
 using namespace std;
 
 int main() {
@@ -14,7 +21,7 @@ int main() {
 }
 ```
 
-### Makefile template
+### Makefile Template
 
 ```makefile
 all: run clean
